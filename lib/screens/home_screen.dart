@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     obat: obatList[index],
                     onDelete: () => removeObat(index),
                     onEdit: () async {
-                      final result = await Navigator.push(
+                      await Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder:
@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
         onPressed: () async {
           final result = await Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => AddObatScreen()),
+            MaterialPageRoute(builder: (context) => AddObatScreen(onAddObat: addObat)),
           );
           if (result != null) addObat(result);
         },

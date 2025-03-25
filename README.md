@@ -1,16 +1,48 @@
-# medtrack
+# MedTrack - Personal Medicine Tracker
 
-A new Flutter project.
+## Identitas Pengembang
 
-## Getting Started
+**Lucky Santoso - 5025221050**  
+**Pemrograman Perangkat Bergerak (C)**
 
-This project is a starting point for a Flutter application.
+## Fitur Aplikasi
 
-A few resources to get you started if this is your first Flutter project:
+- **Tambah Obat**: Menyimpan informasi obat dengan jadwal.
+- **Edit Obat**: Memperbarui informasi obat yang sudah ada.
+- **Hapus Obat**: Menghapus obat dari daftar.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 1️⃣ Menggunakan Minimal 5 Widget Berbeda
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Widget                      | Fungsi                                                  | Letak dalam kode                                                                 |
+| --------------------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| ✅ **Scaffold**             | Struktur utama layar.                                   | AddObatScreen, EditObatScreen, MainScreen                                        |
+| ✅ **AppBar**               | Menampilkan judul halaman.                              | `Scaffold(appBar: AppBar(...))` di AddObatScreen, EditObatScreen, dan MainScreen |
+| ✅ **ListView.builder**     | Menampilkan daftar obat dalam list.                     | MainScreen untuk menampilkan daftar obat.                                        |
+| ✅ **Card**                 | Menampilkan setiap item obat dalam bentuk kartu.        | ObatCard digunakan di dalam ListView.builder                                     |
+| ✅ **ListTile**             | Digunakan dalam ObatCard untuk menampilkan detail obat. | ObatCard                                                                         |
+| ✅ **FloatingActionButton** | Tombol untuk menambahkan obat.                          | MainScreen                                                                       |
+| ✅ **TextField**            | Untuk input data obat.                                  | AddObatScreen, EditObatScreen                                                    |
+| ✅ **ElevatedButton**       | Tombol untuk menyimpan perubahan atau memilih jadwal.   | AddObatScreen, EditObatScreen                                                    |
+| ✅ **IconButton**           | Untuk mengedit dan menghapus obat.                      | ObatCard                                                                         |
+
+✔ **Lebih dari 5 widget berbeda sudah digunakan!** 🎉
+
+## 2️⃣ Custom Class & Custom Stateless Widget
+
+| Kriteria                                  | Letak dalam kode         |
+| ----------------------------------------- | ------------------------ |
+| ✅ **Custom Class (ObatModel)**           | `models/obat_model.dart` |
+| ✅ **Custom Stateless Widget (ObatCard)** | `widgets/obat_card.dart` |
+
+## 3️⃣ Apply Create, Read, Update, Delete (CRUD)
+
+| Operasi       | Keterangan                    | Letak dalam kode                |
+| ------------- | ----------------------------- | ------------------------------- |
+| ✅ **Create** | Menambahkan obat baru.        | AddObatScreen (`onAddObat`)     |
+| ✅ **Read**   | Menampilkan daftar obat.      | MainScreen (`ListView.builder`) |
+| ✅ **Update** | Mengedit obat yang sudah ada. | EditObatScreen (`onEditObat`)   |
+| ✅ **Delete** | Menghapus obat dari daftar.   | ObatCard (`onDelete`)           |
+
+## Kesimpulan
+
+✅ **Aplikasi sudah memenuhi semua kriteria!** 🚀

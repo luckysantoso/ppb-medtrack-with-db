@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../models/obat_model.dart';
-import '../screens/edit_obat_screen.dart';
 
 class ObatCard extends StatelessWidget {
   final ObatModel obat;
