@@ -31,56 +31,61 @@ class _HomeScreenState extends State<HomeScreen> {
   void addObat(ObatModel obat) {
     setState(() {
       obatList.add(obat);
+      _sortObatList();
     });
   }
 
   void removeObat(int index) {
     setState(() {
       obatList.removeAt(index);
+      _sortObatList();
     });
   }
 
   void editObat(ObatModel updatedObat, int index) {
     setState(() {
       obatList[index] = updatedObat;
+      _sortObatList();
     });
+  }
+
+  void _sortObatList() {
+    obatList.sort((a, b) => a.jadwal.compareTo(b.jadwal));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("MedTrack - Obat")),
-      body:
-          obatList.isEmpty
-              ? Center(child: Text("Belum ada obat yang ditambahkan"))
-              : ListView.builder(
-                itemCount: obatList.length,
-                itemBuilder: (context, index) {
-                  return ObatCard(
-                    obat: obatList[index],
-                    onDelete: () => removeObat(index),
-                    onEdit: () async {
-                      await Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder:
-                              (context) => EditObatScreen(
-                                obat: obatList[index],
-                                index: index,
-                                onEditObat: editObat,
-                              ),
+      body: obatList.isEmpty
+          ? Center(child: Text("Belum ada obat yang ditambahkan"))
+          : ListView.builder(
+              itemCount: obatList.length,
+              itemBuilder: (context, index) {
+                return ObatCard(
+                  obat: obatList[index],
+                  onDelete: () => removeObat(index),
+                  onEdit: () async {
+                    await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => EditObatScreen(
+                          obat: obatList[index],
+                          index: index,
+                          onEditObat: editObat,
                         ),
-                      );
-                    },
-                  );
-                },
-              ),
-
+                      ),
+                    );
+                  },
+                );
+              },
+            ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           final result = await Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => AddObatScreen(onAddObat: addObat)),
+            MaterialPageRoute(
+                builder: (context) => AddObatScreen(onAddObat: addObat)),
           );
           if (result != null) addObat(result);
         },

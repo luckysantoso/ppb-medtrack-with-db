@@ -7,6 +7,7 @@
 
 ## Fitur Aplikasi
 
+- **Lihat Obat** : Menampilkan informasiobat yang telah dibuat.
 - **Tambah Obat**: Menyimpan informasi obat dengan jadwal.
 - **Edit Obat**: Memperbarui informasi obat yang sudah ada.
 - **Hapus Obat**: Menghapus obat dari daftar.
@@ -48,4 +49,11 @@
 ✅ **Aplikasi sudah memenuhi semua kriteria!** 🚀
 
 ## 🎥 Demo Video
+
 [![MedTrack Demo](https://img.youtube.com/vi/cpoBCnsh9Ck/0.jpg)](https://youtu.be/cpoBCnsh9Ck)
+
+## 📌 Daftar Pustaka
+
+OpenAI. (2025). _ChatGPT (diakses 25 Maret)_. https://openai.com/chatgpt
+
+> Referensi ini digunakan untuk membantu memperbaiki error dalam kode yang dibuat secara from scratch, termasuk optimasi implementasi widget, state management, dan perbaikan bug pada fitur CRUD dalam aplikasi MedTrack.
