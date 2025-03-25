@@ -26,7 +26,6 @@
 | ✅ **ElevatedButton**       | Tombol untuk menyimpan perubahan atau memilih jadwal.   | AddObatScreen, EditObatScreen                                                    |
 | ✅ **IconButton**           | Untuk mengedit dan menghapus obat.                      | ObatCard                                                                         |
 
-✔ **Lebih dari 5 widget berbeda sudah digunakan!** 🎉
 
 ## 2️⃣ Custom Class & Custom Stateless Widget
 
