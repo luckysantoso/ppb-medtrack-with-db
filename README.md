@@ -58,7 +58,7 @@ Aplikasi ini telah menggunakan **database lokal SQLite** dengan bantuan package 
 | ------------------- | -------------------------------------------------------------------------------------------- |
 | ✅ `DatabaseHelper` | Class helper untuk membuat dan mengelola database lokal (`lib/helpers/database_helper.dart`) |
 | ✅ Tabel `obat`     | Menyimpan data nama obat, dosis, dan jadwal                                                  |
-| ✅ CRUD SQLite      | Operasi tambah, ambil, ubah, dan hapus data obat dilakukan langsung ke database lokal        |
+| ✅ CRUD SQFLite      | Operasi tambah, ambil, ubah, dan hapus data obat dilakukan langsung ke database lokal        |
 
 ## Kesimpulan
 
