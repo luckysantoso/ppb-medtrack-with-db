@@ -71,6 +71,7 @@ class _EditObatScreenState extends State<EditObatScreen> {
     );
 
     final updatedObat = ObatModel(
+      id: widget.obat.id,
       nama: _namaController.text,
       dosis: _dosisController.text,
       jadwal: finalJadwal,
