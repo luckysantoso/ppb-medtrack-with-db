@@ -66,6 +66,7 @@ Aplikasi ini telah menggunakan **database lokal SQLite** dengan bantuan package 
 ✅ **Telah menambahkan penyimpanan lokal menggunakan SQLite!**
 
 ## 🎥 Demo Video
+[![Demo Video](https://img.youtube.com/vi/hgBGHqndaL0/0.jpg)](https://youtu.be/hgBGHqndaL0)
 
 ## 📌 Daftar Pustaka
 
